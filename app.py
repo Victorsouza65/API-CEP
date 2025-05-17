@@ -39,8 +39,12 @@ def climatempo():
     
     temperatura = result['current']['temp_c']
     umidade = result['current']['humidity']
+    Região = ['location']['region']
+    Horario = ['location']['localtime']
+    vis_km = ['current']['vis_km']
+    Pressão = ['current']['pressure_mb']
 
-    return render_template('tempo.html',temp=temperatura, umid=umidade)
+    return render_template('tempo.html',temp=temperatura, umid=umidade, region=Região, localtime=Horario, vis_km=vis, pressure_mb=Pressão )
     #return resposta.json()
 
 
