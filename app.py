@@ -35,7 +35,7 @@ def climatempo():
     cidade = "Presidente Prudente"
     url = f'https://api.weather.com/v1/current.json?key={key}&q={cidade}&lang=pt'
     resposta = requests.get(url)
-    print
+    result = resposta.json()
     
     temperatura = result['current']['temp_c']
     umidade = result['current']['humidity']
