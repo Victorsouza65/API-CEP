@@ -33,7 +33,7 @@ def pesquisacep(cep):
 def climatempo():
     key = 'c4380707dde242f4b78202712252204'
     cidade = "Presidente Prudente"
-    url = f'https://api.weather.com/v1/current.json?key={key}&q={cidade}&lang=pt'
+    url = f'https://api.weatherapi.com/v1/current.json?key={key}&q={cidade}&lang=pt'
     resposta = requests.get(url)
     result = resposta.json()
     
