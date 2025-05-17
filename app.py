@@ -31,7 +31,7 @@ def pesquisacep(cep):
 
 @app.route('/climatempo', methods=['GET'])
 def climatempo():
-    key = '04649201af66916ff4d1c09e1fbc296d'
+    key = 'c4380707dde242f4b78202712252204'
     cidade = "Presidente Prudente"
     url = f'https://api.weather.com/v1/current.json?key={key}&q={cidade}&lang=pt'
     resposta = requests.get(url)
