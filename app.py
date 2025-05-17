@@ -23,8 +23,26 @@ def pesquisacep(cep):
     resposta = requests.get(url)
     return resposta.json()
 
-@app.route('/pesquisaclima/<SP>',methods=['GET'])
-def pesquisaclima(SP):
-    url = f'https://api.weatherapi.com/v1/current.json?key=7fdc3dc9c75ab87956c81054efae21be=Sao'
+#@app.route('/pesquisaclima/<SP>',methods=['GET'])
+#def pesquisaclima(SP):
+#    url = f'https://api.weatherapi.com/v1/current.json?key=7fdc3dc9c75ab87956c81054efae21be=Sao'
+#    resposta = requests.get(url)
+#    return resposta.json()
+
+@app.route('/tempo', methods=['GET'])
+def tempo():
+    key = ''
+    cidade = "Presidente Prudente"
+    url = f'https://api.weather.com/v1/current.json?key={key}&q={cidade}&lang=pt'
     resposta = requests.get(url)
-    return resposta.json()
+    print
+    
+    temperatura = result['current']['temp_c']
+    umidade = result['current']['humidity']
+
+    return render_template('tempo.html',temp=temperatura, umid=umidade)
+    #return resposta.json()
+
+
+if __name__ == '__main__':
+        app.run(debug=True)
