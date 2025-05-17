@@ -25,6 +25,6 @@ def pesquisacep(cep):
 
 @app.route('/pesquisacep/<PP>',methods=['GET'])
 def pesquisaclima(clima):
-    url = f'https://api.openweathermap.org/data/3.0/onecall?lat={-22.121265}&lon={ -51.383400}&exclude={part}&appid={57d5ccbe093b842de9df6db944f4f496}'
+    url = f'https://api.openweathermap.org/data/3.0/onecall?lat={-22.121265}&lon={ -51.383400}&exclude={part}&appid={79f6ca8da6956e8c7fd3722b3b176d1b}'
     resposta = requests.get(url)
     return resposta.json()
