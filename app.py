@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template
 import requests
+
 app = Flask(__name__)
 
 
@@ -39,7 +40,7 @@ def climatempo():
     
     temperatura = result['current']['temp_c']
     umidade = result['current']['humidity']
-    Região = ['location']['region']
+    #Região = ['location']['region']
     Horario = ['location']['localtime']
     vis_km = ['current']['vis_km']
     Pressão = ['current']['pressure_mb']
