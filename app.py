@@ -24,7 +24,7 @@ def pesquisacep(cep):
     return resposta.json()
 
 @app.route('/pesquisaclima/<SP>',methods=['GET'])
-def pesquisaclima(PP):
+def pesquisaclima(SP):
     url = f'https://api.weatherapi.com/v1/current.json?key=c4380707dde242f4b78202712252204&q=Sao'
     resposta = requests.get(url)
     return resposta.json()
