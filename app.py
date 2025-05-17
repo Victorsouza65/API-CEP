@@ -23,8 +23,8 @@ def pesquisacep(cep):
     resposta = requests.get(url)
     return resposta.json()
 
-@app.route('/pesquisacep/<PP>',methods=['GET'])
-def pesquisaclima(clima):
-    url = f'https://api.openweathermap.org/data/3.0/onecall?lat={-22.121265}&lon={ -51.383400}&exclude={part}&appid={79f6ca8da6956e8c7fd3722b3b176d1b}'
+@app.route('/pesquisaclima/<PP>',methods=['GET'])
+def pesquisaclima(PP):
+    url = f'https://api.weatherapi.com/v1/current.json?key=c4380707dde242f4b78202712252204&q=SaoPaulo&lang=pt'
     resposta = requests.get(url)
     return resposta.json()
