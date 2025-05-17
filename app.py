@@ -21,7 +21,7 @@ def senai():
 def pesquisacep(cep):
     url = f'http://viacep.com.br/ws/{cep}/json/'
     resposta = requests.get(url)
-    return resposta.json()
+    #return resposta.json()
 
 #@app.route('/pesquisaclima/<SP>',methods=['GET'])
 #def pesquisaclima(SP):
